@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F479F6AC17FEF3E000739400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AB17FEF3E000739400 /* Foundation.framework */; };
+		F479F6AE17FEF3E000739400 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AD17FEF3E000739400 /* CoreGraphics.framework */; };
+		F479F6B017FEF3E000739400 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AF17FEF3E000739400 /* UIKit.framework */; };
+		F479F6B617FEF3E000739400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F479F6B417FEF3E000739400 /* InfoPlist.strings */; };
+		F479F6B817FEF3E000739400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F479F6B717FEF3E000739400 /* main.m */; };
+		F479F6BC17FEF3E000739400 /* VTASRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F479F6BB17FEF3E000739400 /* VTASRAppDelegate.m */; };
+		F479F6BF17FEF3E000739400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F479F6BD17FEF3E000739400 /* Main.storyboard */; };
+		F479F6C217FEF3E000739400 /* VTASRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F479F6C117FEF3E000739400 /* VTASRViewController.m */; };
+		F479F6C417FEF3E000739400 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F479F6C317FEF3E000739400 /* Images.xcassets */; };
+		F479F6CB17FEF3E100739400 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6CA17FEF3E100739400 /* XCTest.framework */; };
+		F479F6CC17FEF3E100739400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AB17FEF3E000739400 /* Foundation.framework */; };
+		F479F6CD17FEF3E100739400 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AF17FEF3E000739400 /* UIKit.framework */; };
+		F479F6D517FEF3E100739400 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F479F6D317FEF3E100739400 /* InfoPlist.strings */; };
+		F479F6D717FEF3E100739400 /* VTAStarRaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F479F6D617FEF3E100739400 /* VTAStarRaterTests.m */; };
+		F479F6E617FEF94300739400 /* VTASRStarLine.m in Sources */ = {isa = PBXBuildFile; fileRef = F479F6E517FEF94300739400 /* VTASRStarLine.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F479F6CE17FEF3E100739400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F479F6A017FEF3E000739400 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F479F6A717FEF3E000739400;
+			remoteInfo = VTAStarRater;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F479F6A817FEF3E000739400 /* VTAStarRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTAStarRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F479F6AB17FEF3E000739400 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F479F6AD17FEF3E000739400 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F479F6AF17FEF3E000739400 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F479F6B317FEF3E000739400 /* VTAStarRater-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VTAStarRater-Info.plist"; sourceTree = "<group>"; };
+		F479F6B517FEF3E000739400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F479F6B717FEF3E000739400 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F479F6B917FEF3E000739400 /* VTAStarRater-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VTAStarRater-Prefix.pch"; sourceTree = "<group>"; };
+		F479F6BA17FEF3E000739400 /* VTASRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTASRAppDelegate.h; sourceTree = "<group>"; };
+		F479F6BB17FEF3E000739400 /* VTASRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTASRAppDelegate.m; sourceTree = "<group>"; };
+		F479F6BE17FEF3E000739400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F479F6C017FEF3E000739400 /* VTASRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VTASRViewController.h; sourceTree = "<group>"; };
+		F479F6C117FEF3E000739400 /* VTASRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTASRViewController.m; sourceTree = "<group>"; };
+		F479F6C317FEF3E000739400 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F479F6C917FEF3E100739400 /* VTAStarRaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VTAStarRaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F479F6CA17FEF3E100739400 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F479F6D217FEF3E100739400 /* VTAStarRaterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VTAStarRaterTests-Info.plist"; sourceTree = "<group>"; };
+		F479F6D417FEF3E100739400 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F479F6D617FEF3E100739400 /* VTAStarRaterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VTAStarRaterTests.m; sourceTree = "<group>"; };
+		F479F6E417FEF94300739400 /* VTASRStarLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTASRStarLine.h; path = ../Source/VTASRStarLine.h; sourceTree = "<group>"; };
+		F479F6E517FEF94300739400 /* VTASRStarLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTASRStarLine.m; path = ../Source/VTASRStarLine.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F479F6A517FEF3E000739400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6AE17FEF3E000739400 /* CoreGraphics.framework in Frameworks */,
+				F479F6B017FEF3E000739400 /* UIKit.framework in Frameworks */,
+				F479F6AC17FEF3E000739400 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F479F6C617FEF3E100739400 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6CB17FEF3E100739400 /* XCTest.framework in Frameworks */,
+				F479F6CD17FEF3E100739400 /* UIKit.framework in Frameworks */,
+				F479F6CC17FEF3E100739400 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F479F69F17FEF3E000739400 = {
+			isa = PBXGroup;
+			children = (
+				F479F6E017FEF3E900739400 /* Source */,
+				F479F6B117FEF3E000739400 /* VTAStarRater */,
+				F479F6D017FEF3E100739400 /* VTAStarRaterTests */,
+				F479F6AA17FEF3E000739400 /* Frameworks */,
+				F479F6A917FEF3E000739400 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F479F6A917FEF3E000739400 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6A817FEF3E000739400 /* VTAStarRater.app */,
+				F479F6C917FEF3E100739400 /* VTAStarRaterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F479F6AA17FEF3E000739400 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6AB17FEF3E000739400 /* Foundation.framework */,
+				F479F6AD17FEF3E000739400 /* CoreGraphics.framework */,
+				F479F6AF17FEF3E000739400 /* UIKit.framework */,
+				F479F6CA17FEF3E100739400 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F479F6B117FEF3E000739400 /* VTAStarRater */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6BA17FEF3E000739400 /* VTASRAppDelegate.h */,
+				F479F6BB17FEF3E000739400 /* VTASRAppDelegate.m */,
+				F479F6BD17FEF3E000739400 /* Main.storyboard */,
+				F479F6C017FEF3E000739400 /* VTASRViewController.h */,
+				F479F6C117FEF3E000739400 /* VTASRViewController.m */,
+				F479F6C317FEF3E000739400 /* Images.xcassets */,
+				F479F6B217FEF3E000739400 /* Supporting Files */,
+			);
+			path = VTAStarRater;
+			sourceTree = "<group>";
+		};
+		F479F6B217FEF3E000739400 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6B317FEF3E000739400 /* VTAStarRater-Info.plist */,
+				F479F6B417FEF3E000739400 /* InfoPlist.strings */,
+				F479F6B717FEF3E000739400 /* main.m */,
+				F479F6B917FEF3E000739400 /* VTAStarRater-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F479F6D017FEF3E100739400 /* VTAStarRaterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6D617FEF3E100739400 /* VTAStarRaterTests.m */,
+				F479F6D117FEF3E100739400 /* Supporting Files */,
+			);
+			path = VTAStarRaterTests;
+			sourceTree = "<group>";
+		};
+		F479F6D117FEF3E100739400 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6D217FEF3E100739400 /* VTAStarRaterTests-Info.plist */,
+				F479F6D317FEF3E100739400 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F479F6E017FEF3E900739400 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F479F6E417FEF94300739400 /* VTASRStarLine.h */,
+				F479F6E517FEF94300739400 /* VTASRStarLine.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F479F6A717FEF3E000739400 /* VTAStarRater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F479F6DA17FEF3E100739400 /* Build configuration list for PBXNativeTarget "VTAStarRater" */;
+			buildPhases = (
+				F479F6A417FEF3E000739400 /* Sources */,
+				F479F6A517FEF3E000739400 /* Frameworks */,
+				F479F6A617FEF3E000739400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VTAStarRater;
+			productName = VTAStarRater;
+			productReference = F479F6A817FEF3E000739400 /* VTAStarRater.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F479F6C817FEF3E100739400 /* VTAStarRaterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F479F6DD17FEF3E100739400 /* Build configuration list for PBXNativeTarget "VTAStarRaterTests" */;
+			buildPhases = (
+				F479F6C517FEF3E100739400 /* Sources */,
+				F479F6C617FEF3E100739400 /* Frameworks */,
+				F479F6C717FEF3E100739400 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F479F6CF17FEF3E100739400 /* PBXTargetDependency */,
+			);
+			name = VTAStarRaterTests;
+			productName = VTAStarRaterTests;
+			productReference = F479F6C917FEF3E100739400 /* VTAStarRaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F479F6A017FEF3E000739400 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VTASR;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Simon Fairbairn";
+				TargetAttributes = {
+					F479F6C817FEF3E100739400 = {
+						TestTargetID = F479F6A717FEF3E000739400;
+					};
+				};
+			};
+			buildConfigurationList = F479F6A317FEF3E000739400 /* Build configuration list for PBXProject "VTAStarRater" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F479F69F17FEF3E000739400;
+			productRefGroup = F479F6A917FEF3E000739400 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F479F6A717FEF3E000739400 /* VTAStarRater */,
+				F479F6C817FEF3E100739400 /* VTAStarRaterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F479F6A617FEF3E000739400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6C417FEF3E000739400 /* Images.xcassets in Resources */,
+				F479F6B617FEF3E000739400 /* InfoPlist.strings in Resources */,
+				F479F6BF17FEF3E000739400 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F479F6C717FEF3E100739400 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6D517FEF3E100739400 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F479F6A417FEF3E000739400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6B817FEF3E000739400 /* main.m in Sources */,
+				F479F6C217FEF3E000739400 /* VTASRViewController.m in Sources */,
+				F479F6BC17FEF3E000739400 /* VTASRAppDelegate.m in Sources */,
+				F479F6E617FEF94300739400 /* VTASRStarLine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F479F6C517FEF3E100739400 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F479F6D717FEF3E100739400 /* VTAStarRaterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F479F6CF17FEF3E100739400 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F479F6A717FEF3E000739400 /* VTAStarRater */;
+			targetProxy = F479F6CE17FEF3E100739400 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F479F6B417FEF3E000739400 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F479F6B517FEF3E000739400 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F479F6BD17FEF3E000739400 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F479F6BE17FEF3E000739400 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F479F6D317FEF3E100739400 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F479F6D417FEF3E100739400 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F479F6D817FEF3E100739400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F479F6D917FEF3E100739400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F479F6DB17FEF3E100739400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VTAStarRater/VTAStarRater-Prefix.pch";
+				INFOPLIST_FILE = "VTAStarRater/VTAStarRater-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F479F6DC17FEF3E100739400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VTAStarRater/VTAStarRater-Prefix.pch";
+				INFOPLIST_FILE = "VTAStarRater/VTAStarRater-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F479F6DE17FEF3E100739400 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VTAStarRater.app/VTAStarRater";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VTAStarRater/VTAStarRater-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VTAStarRaterTests/VTAStarRaterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F479F6DF17FEF3E100739400 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VTAStarRater.app/VTAStarRater";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VTAStarRater/VTAStarRater-Prefix.pch";
+				INFOPLIST_FILE = "VTAStarRaterTests/VTAStarRaterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F479F6A317FEF3E000739400 /* Build configuration list for PBXProject "VTAStarRater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F479F6D817FEF3E100739400 /* Debug */,
+				F479F6D917FEF3E100739400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F479F6DA17FEF3E100739400 /* Build configuration list for PBXNativeTarget "VTAStarRater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F479F6DB17FEF3E100739400 /* Debug */,
+				F479F6DC17FEF3E100739400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F479F6DD17FEF3E100739400 /* Build configuration list for PBXNativeTarget "VTAStarRaterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F479F6DE17FEF3E100739400 /* Debug */,
+				F479F6DF17FEF3E100739400 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F479F6A017FEF3E000739400 /* Project object */;
+}
