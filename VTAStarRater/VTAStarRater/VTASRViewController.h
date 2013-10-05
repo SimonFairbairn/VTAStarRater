@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VTASRStarLine.h"
 
-@interface VTASRViewController : UIViewController
+@interface VTASRViewController : UIViewController <VTAStarLineDelegate>
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46B201817FFC94400E75805 /* VTASRStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F46B201717FFC94400E75805 /* VTASRStarView.m */; };
 		F479F6AC17FEF3E000739400 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AB17FEF3E000739400 /* Foundation.framework */; };
 		F479F6AE17FEF3E000739400 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AD17FEF3E000739400 /* CoreGraphics.framework */; };
 		F479F6B017FEF3E000739400 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479F6AF17FEF3E000739400 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F46B201617FFC94400E75805 /* VTASRStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VTASRStarView.h; path = ../Source/VTASRStarView.h; sourceTree = "<group>"; };
+		F46B201717FFC94400E75805 /* VTASRStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VTASRStarView.m; path = ../Source/VTASRStarView.m; sourceTree = "<group>"; };
 		F479F6A817FEF3E000739400 /* VTAStarRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTAStarRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F479F6AB17FEF3E000739400 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F479F6AD17FEF3E000739400 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,8 @@
 			children = (
 				F479F6E417FEF94300739400 /* VTASRStarLine.h */,
 				F479F6E517FEF94300739400 /* VTASRStarLine.m */,
+				F46B201617FFC94400E75805 /* VTASRStarView.h */,
+				F46B201717FFC94400E75805 /* VTASRStarView.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				F479F6B817FEF3E000739400 /* main.m in Sources */,
 				F479F6C217FEF3E000739400 /* VTASRViewController.m in Sources */,
 				F479F6BC17FEF3E000739400 /* VTASRAppDelegate.m in Sources */,
+				F46B201817FFC94400E75805 /* VTASRStarView.m in Sources */,
 				F479F6E617FEF94300739400 /* VTASRStarLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +481,7 @@
 				F479F6DC17FEF3E100739400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F479F6DD17FEF3E100739400 /* Build configuration list for PBXNativeTarget "VTAStarRaterTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				F479F6DF17FEF3E100739400 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

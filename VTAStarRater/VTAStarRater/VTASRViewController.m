@@ -7,11 +7,11 @@
 //
 
 #import "VTASRViewController.h"
-#import "VTASRStarLine.h"
 
 @interface VTASRViewController ()
 
-@property (nonatomic, strong) IBOutlet VTASRStarLine *starLine;
+@property (nonatomic, weak) IBOutlet VTASRStarLine *starLine;
+@property (nonatomic, weak) IBOutlet UIStepper *stepper;
 
 @end
 
@@ -21,6 +21,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.starLine.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +35,11 @@
     
 
     self.starLine.rating = sender.value;
+}
+
+-(void)vtaStarLineDidChangeRating:(VTASRStarLine *)starline {
+    
+    self.stepper.value = starline.rating;
 }
 
 @end

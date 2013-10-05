@@ -7,9 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VTASRStarView.h"
+
+@class VTASRStarLine;
+
+@protocol VTAStarLineDelegate <NSObject>
+
+@optional
+
+-(void)vtaStarLineDidChangeRating:(VTASRStarLine *)starline;
+
+@end
 
 @interface VTASRStarLine : UIView
 
+@property (nonatomic, weak) id delegate;
+
 @property (nonatomic) NSUInteger rating;
+@property (nonatomic, strong) UIColor *underStarColor;
+
 
 @end

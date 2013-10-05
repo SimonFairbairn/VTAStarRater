@@ -8,42 +8,68 @@
 
 #import "VTASRStarLine.h"
 
+
 @interface VTASRStarLine ()
 
 @property (nonatomic) CGFloat lastPosition;
 
+@property (nonatomic, strong) UIView *backgroundView;
+@property (nonatomic, strong) VTASRStarView *stars;
 
 @end
 
 @implementation VTASRStarLine
 
+@synthesize underStarColor = _underStarColor;
 
 #pragma mark - Properties
 
+-(void)setUnderStarColor:(UIColor *)underStarColor {
+    _underStarColor = underStarColor;
+    self.backgroundColor = underStarColor;
+}
+
+-(UIColor *)underStarColor {
+    if ( !_underStarColor ) {
+        float h,s,b,a;
+        [self.tintColor getHue:&h saturation:&s brightness:&b alpha:&a];
+        
+        _underStarColor = [UIColor colorWithHue:h saturation:s brightness:b * 0.5 alpha:a];
+        
+    }
+    return _underStarColor;
+}
+
+
 -(void)setRating:(NSUInteger)rating {
     _rating = rating;
-    [self setNeedsDisplay];
+    CGFloat width = CGRectGetWidth(self.bounds) / 10;
+    CGRect backgroundFrame = self.backgroundView.frame;
+    backgroundFrame.size.width = width * rating;
+    self.backgroundView.frame = backgroundFrame;
+    
 }
 
 
 -(void)setLastPosition:(CGFloat)lastPosition {
     
-    CGFloat newPos;
-    CGFloat width = (self.bounds.size.width / 10 );
-    
-    CGFloat tempPos = lastPosition / width;
-    
+    _lastPosition = lastPosition;
+}
 
-    if ( tempPos > 0.5 ) {
-        self.rating = ceil(tempPos);
-    } else {
-        self.rating = floor(tempPos);
+-(UIView *)backgroundView {
+    if ( !_backgroundView ) {
+        _backgroundView = [[UIView alloc] initWithFrame:self.bounds];
+        _backgroundView.backgroundColor = self.tintColor;
     }
-    
-    
-    newPos = self.rating * width;
-    
-    _lastPosition = newPos;
+    return _backgroundView;
+}
+
+-(VTASRStarView *)stars {
+    if ( !_stars ) {
+        _stars = [[VTASRStarView alloc] initWithFrame:self.bounds];
+        _stars.numberOfStars = 5;
+    }
+    return _stars;
 }
 
 
@@ -68,94 +94,66 @@
 }
 
 -(void)setup {
-
+    [self addSubview:self.backgroundView];
+    [self addSubview:self.stars];
+    self.stars.frameColor = self.backgroundColor;
+    self.backgroundColor = self.underStarColor;
 }
 
-
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    
-    CGRect backgroundFrame = self.bounds;
-    CGRect fullBackgroundFrame = backgroundFrame;
-    
-    CGFloat width = (self.bounds.size.width / 10 );
-    
-    backgroundFrame.size.width = self.rating * width;
-
-    
-    CGRect starBounds = self.bounds;
-    starBounds.size.width = floor(self.bounds.size.width / 5);
-    
-    // Drawing code
-    
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    UIBezierPath *starPath = [[UIBezierPath alloc] init];
-    
-    for ( int i = 0; i < 5; i++ ) {
-        
-
-        
-        UIBezierPath *path = [[UIBezierPath alloc] init];
-        
-        CGFloat quarter = floor(CGRectGetWidth(starBounds) / 8);
-        CGFloat third = floor(CGRectGetWidth(starBounds) / 3);
-        //    CGFloat diff = floor( (third / 4) * 3 );
-        
-        [path moveToPoint:CGPointMake(CGRectGetMidX(starBounds), 0.0)];
-        [path addLineToPoint:CGPointMake(starBounds.origin.x + quarter, CGRectGetHeight(starBounds))];
-        //    [path addLineToPoint:CGPointMake(CGRectGetMidX(self.bounds), third * 2)];
-        //    [path addLineToPoint:CGPointMake(CGRectGetMidX(self.bounds), third + diff)];
-        
-        [path addLineToPoint:CGPointMake(starBounds.origin.x + CGRectGetWidth(starBounds), third)];
-        [path addLineToPoint:CGPointMake(starBounds.origin.x, third)];
-        
-        //    [path addLineToPoint:CGPointMake(CGRectGetMidX(self.bounds), third + diff)];
-        //    [path addLineToPoint:CGPointMake(CGRectGetMidX(self.bounds), third * 2)];
-        [path addLineToPoint:CGPointMake(starBounds.origin.x + (quarter * 7), CGRectGetHeight(starBounds))];
-        [path closePath];
-        
-        starBounds.origin.x = starBounds.origin.x + starBounds.size.width;
-        
-        [starPath appendPath:path];
-        
-    }
-    [starPath addClip];
-    
-    UIBezierPath *fullBackground = [UIBezierPath bezierPathWithRect:fullBackgroundFrame];
-    [[UIColor blackColor] setFill];
-    [fullBackground fill];
-
-    
-    UIBezierPath *background = [UIBezierPath bezierPathWithRect:backgroundFrame];
-    [self.tintColor setFill];
-    [background fill];
-
-    
-    CGContextAddPath(ctx, starPath.CGPath);
-    CGContextAddPath(ctx, background.CGPath);
-//    CGContextAddPath(ctx, fullBackground.CGPath);
-}
+#pragma mark - Touches
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self updatePositionWithTouches:touches];
+    [self updatePositionWithTouches:touches didFinish:NO];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self updatePositionWithTouches:touches];
+    [self updatePositionWithTouches:touches didFinish:NO];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [self updatePositionWithTouches:touches];
+    [self updatePositionWithTouches:touches didFinish:YES];
+    
 }
 
--(void)updatePositionWithTouches:(NSSet *)touches {
+-(void)updatePositionWithTouches:(NSSet *)touches didFinish:(BOOL)finish {
+    
     CGPoint locationInView = [[touches anyObject] locationInView:self];
     self.lastPosition = locationInView.x;
-    [self setNeedsDisplay];
+    if ( self.lastPosition >= CGRectGetWidth(self.bounds)) self.lastPosition = CGRectGetWidth(self.bounds);
+    
+    if ( finish ) {
+        CGFloat width = (self.bounds.size.width / 10 );
+        CGFloat tempPos = self.lastPosition / width;
+        NSUInteger rating;
+        int beforeDecimal = (int)tempPos;
+        float noInt = tempPos - beforeDecimal;
+        if ( noInt > 0.5 ) {
+            rating = ceil(tempPos);
+        } else {
+            rating = floor(tempPos);
+        }
+        
+        self.lastPosition = rating * width;
+        [UIView animateWithDuration:0.3 animations:^{
+            [self updateBackground];
+        } completion:^(BOOL finished) {
+            self.rating = rating;
+            if ( [self.delegate respondsToSelector:@selector(vtaStarLineDidChangeRating:)]) {
+                [self.delegate vtaStarLineDidChangeRating:self];
+            }
+            
+        }];
+    } else {
+        [self updateBackground];
+    }
 }
 
+-(void) updateBackground {
+    CGRect backgroundViewFrame = self.backgroundView.frame;
+    backgroundViewFrame.size.width = self.lastPosition;
+    self.backgroundView.frame = backgroundViewFrame;
+    
+}
 
 
 @end
